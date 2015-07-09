@@ -1,0 +1,27 @@
+<div class="login-container">
+  <img src="./images/tiprlogo.png" alt="Tipr Logo" class="tiprlogo">
+  <section class="user-login">
+    <ul>
+      <form {{action 'createUser' on='submit'}}>
+        {{paper-text label="Name" value=model.name}}
+        {{paper-text label="E-mail" type="email" value=model.username}}
+        {{paper-text label="Password" type="password" value=model.password}}
+        {{#paper-button classNames="md-primary"}}Sign Up{{/paper-button}}
+      </form>
+
+
+    </ul>
+  </section>
+    <p>Don't have an account?</p>
+  <section class="create-account">
+    <ul>
+      <li><button>Login in with Facebook!</button></li>
+      <form {{action 'authenticate' on='submit'}}>
+        {{paper-text label="E-mail" type="email" value=identification}}
+        {{paper-text label="Password" type="password" value=password}}
+        {{#paper-button classNames="md-primary"}}Log In{{/paper-button}}
+      </form>
+    </ul>
+  </section>
+</div>
+{{outlet}}
