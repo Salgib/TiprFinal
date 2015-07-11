@@ -1,1 +1,61 @@
  @import 'ember-paper';
+ @import 'palette';
+
+ html,
+ body {
+   background-color: $darkblue;
+   color: $lightblue;
+ }
+
+
+.login-container {
+  height: auto;
+  margin: 0 auto;
+  width: 1000px;
+  color: $lightblue;
+ }
+
+ .login-container li {
+   list-style: none;
+ }
+
+.login-field {
+  color: $lightblue;
+}
+
+.favorite-performers li {
+  list-style: none;
+}
+
+.patron-info li {
+  list-style: none;
+}
+
+.user-container {
+  height: auto;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.welcome-message {
+  color: $lightblue;
+}
+
+.gmap {
+  float: right;
+  border-radius: 5px;
+}
+
+.logout-button {
+  color: $lightblue;
+  background-color: $blue;
+}
+
+.logout-button:hover {
+  color: black;
+  background-color: $lightblue;
+}
+
+paper-text {
+  color: white;
+}

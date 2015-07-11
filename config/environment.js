@@ -23,15 +23,17 @@ module.exports = function(environment) {
     contentSecurityPolicy: {
       'default-src': "'none'",
       'script-src': "'self'",
-      'font-src': "'self' 'https://fonts.gstatic.com'",
-      'connect-src': "'self' 'api.parse.com'",
+      'font-src': "'self' fonts.gstatic.com",
+      'connect-src': "'self' api.parse.com",
       'img-src': "'self' 'data'",
       'media-src': "'self'"
     },
 
     'simple-auth': {
     authorizer: 'authorizer:parse',
-    crossOriginWhitelist: ['https://api.parse.com']
+    crossOriginWhitelist: ['https://api.parse.com'],
+    routeIfAlreadyAuthenticated: 'users.current',
+    routeAfterAuthentication:'users.current'
     }
   };
 
