@@ -22,11 +22,11 @@ module.exports = function(environment) {
 
     contentSecurityPolicy: {
       'default-src': "'none'",
-      'script-src': "'self' 'unsafe-eval' https://*.googleapis.com http://*.gstatic.com",
-      'font-src': "'self' https://*.googleapis.com https://*.gstatic.com",
+      'script-src': "'self' 'unsafe-eval' *.googleapis.com *.gstatic.com",
+      'font-src': "'self' *.googleapis.com *.gstatic.com",
       'connect-src': "'self' api.parse.com",
-      'style-src':"'self' 'unsafe-inline' https://*.gstatic.com",
-      'img-src': "'self' 'data'",
+      'style-src':"'self' 'unsafe-inline' *.gstatic.com *.googleapis.com",
+      'img-src': "'self' 'data' *.gstatic.com *.googleapis.com",
       'media-src': "'self'"
     },
 

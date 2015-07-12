@@ -10,6 +10,7 @@
 .map-canvas {
   height: 500px;
   width: 500px;
+  margin-right: 20px;
 }
 
 .login-container {
@@ -45,7 +46,7 @@
   color: $lightblue;
 }
 
-.gmap {
+.map-canvas {
   float: right;
   border-radius: 5px;
 }
