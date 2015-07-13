@@ -8,7 +8,9 @@ export default Ember.Route.extend(AuthenticatedRouteMixin, {
 
   actions: {
     invalidateSession: function(){
-      this.get('session').invalidate();
+      this.get('session').invalidate().then(function(){
+        this.transitionTo('/');
+      });
     },
 
     goToPerson: function(){

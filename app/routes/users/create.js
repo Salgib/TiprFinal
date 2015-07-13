@@ -13,6 +13,8 @@ export default Ember.Route.extend({
           sessionToken: user.get('sessionToken')
         });
       }.bind(this));
+
+      this.transitionTo('users.current')
     }
   }
 });

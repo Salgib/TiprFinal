@@ -1,6 +1,8 @@
 <div class="user-container">
-  
-{{google-map}}
+
+  {{google-map}}
+
+
   <h1 class="welcome-message">Hello, {{model.username}}</h1><input type="text" class="search" placeholder="Search for a Performer...">
 
   <div class="patron-info">
@@ -21,4 +23,5 @@
     <button  class="logout-button" {{ action 'invalidateSession' }}>Logout</button>
   {{/if}}
   </div>
+
 </div>
