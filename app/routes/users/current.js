@@ -5,16 +5,13 @@ export default Ember.Route.extend(AuthenticatedRouteMixin, {
   model: function(){
     return this.get('session.currentUser');
   },
+  //
+  // actions: {
+  //   invalidateSession: function(){
+  //     this.get('session').invalidate();
+  //     }
+  //   }
 
-  actions: {
-    invalidateSession: function(){
-      this.get('session').invalidate().then(function(){
-        this.transitionTo('/');
-      });
-    },
 
-    goToPerson: function(){
-      this.transitionTo('performers/:id');
-    }
-  }
+
 });

@@ -10,9 +10,5 @@ export default Ember.Component.extend({
     invalidateSession: function(){
       this.sendAction('action', this.get('model'));
     },
-
-    goToPerson: function(){
-      this.transitionTo('performers/:id');
-    }
   }
 });

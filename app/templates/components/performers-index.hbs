@@ -1,0 +1,16 @@
+
+{{#each model as |performer|}}
+<div class="performer-thumbnail">
+  <li>
+    <h3>
+      {{#link-to 'performers.show' performer}}
+        Username: {{performer.username}}
+      {{/link-to}}
+    </h3>
+  </li>
+  <li>Rating: {{performer.stars}}</li>
+  <li>Act: {{performer.act}}</li>
+</div>
+
+{{/each}}
+{{yield}}

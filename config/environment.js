@@ -33,6 +33,7 @@ module.exports = function(environment) {
     'simple-auth': {
     authorizer: 'authorizer:parse',
     crossOriginWhitelist: ['https://api.parse.com'],
+    authenticationRoute: 'login',
     routeIfAlreadyAuthenticated: 'users.current',
     routeAfterAuthentication:'users.current'
     }

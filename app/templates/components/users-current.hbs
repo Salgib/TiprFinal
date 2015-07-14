@@ -5,8 +5,14 @@
 
   <h1 class="welcome-message">Hello, {{model.username}}</h1><input type="text" class="search" placeholder="Search for a Performer...">
 
-  <div class="patron-info">
+  <div class="favorite-performers">
+    <ul>
+      <li>My Favorite Performers:</li>
+      <li>{{performers-index}}</li>
+    </ul>
+  </div>
 
+  <div class="patron-info">
     <ul>
       <li><a href="#">Interests</a></li>
       <li><a href="#">Who I've Tipped</a></li>
@@ -14,13 +20,9 @@
     </ul>
   </div>
 
-  <div class="favorite-performers">
-    {{performer-list}}
-  </div>
-
 
   <div>{{#if session.isAuthenticated}}
-    <button  class="logout-button" {{ action 'invalidateSession' }}>Logout</button>
+    {{#link-to 'index'}}<button  class="logout-button" {{ action 'invalidateSession' }}>Logout</button>{{/link-to}}
   {{/if}}
   </div>
 

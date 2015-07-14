@@ -9,8 +9,7 @@ Router.map(function() {
   this.route('login');
 
   this.route('performers', function(){
-    this.route('show', {path: '/:performer_id'});
-    this.route('profile');
+    this.route('show', {path: ':performer_id'});
   });
   this.route('users', function() {
     this.route('create');

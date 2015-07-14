@@ -14,7 +14,7 @@ export default Ember.Route.extend({
         });
       }.bind(this));
 
-      this.transitionTo('users.current')
+      this.transitionTo('users.current');
     }
   }
 });

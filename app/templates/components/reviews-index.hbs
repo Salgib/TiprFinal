@@ -1,0 +1,16 @@
+{{#each model as |review|}}
+{{log review}}
+<div class="reviews-thumbnail">
+  <li>
+    <h3>
+      {{#link-to 'reviews.show'}}
+        Title: {{review.title}}
+      {{/link-to}}
+    </h3>
+  </li>
+  <li>Rating: {{review.stars}}</li>
+  <li>Body: {{review.body}}</li>
+</div>
+{{/each}}
+
+{{yield}}
