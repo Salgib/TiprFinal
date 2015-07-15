@@ -1,0 +1,5 @@
+{{#if isShowingConfirmation}}
+  <button {{action 'confirm'}}>Are you sure?</button>
+{{else}}
+  <button {{action 'showConfirmation'}}>{{title}}</button>
+{{/if}}

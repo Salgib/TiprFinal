@@ -17,7 +17,8 @@ Router.map(function() {
   });
   this.route('reviews', function() {
     this.route('create');
-    this.route('show', {path: '/:review_id'});
+    this.route('show', {path: ':review_id'});
+    this.route('update', {path: ':review_id/edit'});
   });
 });
 

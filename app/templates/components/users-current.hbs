@@ -3,12 +3,12 @@
   {{google-map}}
 
 
-  <h1 class="welcome-message">Hello, {{model.username}}</h1><input type="text" class="search" placeholder="Search for a Performer...">
+  <h1 class="welcome-message">Hello, {{session.currentUser.username}}</h1><input type="text" class="search" placeholder="Search for a Performer...">
 
   <div class="favorite-performers">
     <ul>
       <li>My Favorite Performers:</li>
-      <li>{{performers-index}}</li>
+      <li>{{performers-index model=model}}</li>
     </ul>
   </div>
 

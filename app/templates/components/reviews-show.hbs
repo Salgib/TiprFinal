@@ -1,0 +1,12 @@
+<div class="review">
+  <h3>
+      Title: {{model.title}}
+  </h3>
+
+  <li>Rating: {{model.stars}}</li>
+  <li>Body: {{model.body}}</li>
+
+  {{#link-to 'reviews.update' model}}<button> Edit this review</button>{{/link-to}}
+</div>
+
+{{yield}}

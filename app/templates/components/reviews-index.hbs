@@ -3,14 +3,18 @@
 <div class="reviews-thumbnail">
   <li>
     <h3>
-      {{#link-to 'reviews.show'}}
+      {{#link-to 'reviews.show' review}}
         Title: {{review.title}}
       {{/link-to}}
+      {{confirm-button title="Delete" action="deleteReview" param=review}}
     </h3>
   </li>
   <li>Rating: {{review.stars}}</li>
   <li>Body: {{review.body}}</li>
+
 </div>
 {{/each}}
+
+{{#link-to 'reviews.create'}}Create a new review!{{/link-to}}
 
 {{yield}}

@@ -1,7 +1,7 @@
-import Ember from 'ember';
-
-export default Ember.Route.extend({
-  model: function(params){
-    return this.store.findAll('/performers/', +params.performer_id);
-  }
-});
+// import Ember from 'ember';
+//
+// export default Ember.Route.extend({
+//   model: function(params){
+//     return this.store.findAll('/performers/', +params.performer_id);
+//   }
+// });
