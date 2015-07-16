@@ -1,8 +1,8 @@
 <div class="performer-info">
   <ul>
-    <li>Username: {{model.username}}</li>
-    <li>Real Name: {{model.firstName}} {{model.lastName}}</li>
-    <li>What kind of Performance? {{model.act}}</li>
+    <li>Username: {{model.performer.username}}</li>
+    <li>Real Name: {{model.performer.firstName}} {{model.performer.lastName}}</li>
+    <li>What kind of Performance? {{model.performer.act}}</li>
 
   </ul>
 </div>
@@ -13,14 +13,32 @@
   <a href="#"><img src="" alt="Tip $3"></a>
 </div>
 
-<div class="reviews-container">
-  {{performer-reviews}}
+<div class="performer-pic">
+  <ul>
+    <li><img src="{{model.performer.profilepic.url}}" alt="Profile Picture" class="profile-pic"></li>
+    <li><img src="{{model.performer.qrcode.url}}" alt="QR Code" class="qrcode"></li>
+  </ul>
 </div>
 
-<div class="performer-pic">
-  <img src="" alt="Performer Picture">
-  <img src="" alt="Performer QR Code">
+<div class="reviews-container">
+  <ul>
+    {{#each model.reviews as |review|}}
+    <li>
+      <div class="review">
+        <h3>Title: {{review.title}}</h3>
+        <h5>Reviewer: {{review.reviewer}}</h5>
+
+        <li>Rating: {{review.stars}}</li>
+        <li>Body: {{review.body}}</li>
+
+        {{#link-to 'reviews.update' review}}<button> Edit this review</button>{{/link-to}}
+      </div>
+    </li>
+    {{/each}}
+  </ul>
 </div>
+
+
 
 
 

@@ -9,5 +9,13 @@ export default DS.Model.extend({
   longitude: DS.attr('number'),
   act: DS.attr('string'),
   email: DS.attr('string'),
-  stars: DS.attr('number')
+  stars: DS.attr('number'),
+
+  reviews: DS.hasMany('review'),
+
+  qrcode: DS.attr(),
+  profilepic: DS.attr()
+
+
+
 });

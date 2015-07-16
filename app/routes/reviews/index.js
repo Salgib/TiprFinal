@@ -7,7 +7,6 @@ export default Ember.Route.extend({
 
   actions:{
     deleteReview: function(review){
-      // var review = this.modelFor('index');
       review.destroyRecord();
     }
   }

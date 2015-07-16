@@ -6,7 +6,9 @@ export function initialize() {
     firstName: DS.attr('string'),
     lastName: DS.attr('string'),
     act: DS.attr('string'),
-    type: DS.attr('string')
+    type: DS.attr('string'),
+    performers: DS.hasMany('performer'),
+    reviews: DS.hasMany('review')
   });
 }
 

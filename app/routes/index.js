@@ -3,6 +3,9 @@ import UnauthenticatedRouteMixin from 'simple-auth/mixins/unauthenticated-route-
 
 export default Ember.Route.extend({UnauthenticatedRouteMixin,
   model: function(){
-    return this.store.findAll('performer');
+    return Ember.RSVP.hash({
+    performers: this.store.findAll('performer'),
+    reviews: this.store.findAll('review')
+  });
   }
 });
