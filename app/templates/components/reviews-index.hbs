@@ -1,20 +1,22 @@
-{{#each model as |review|}}
-{{log review}}
-<div class="reviews-thumbnail">
-  <li>
-    <h3>
-      {{#link-to 'reviews.show' review}}
-        Title: {{review.title}}
-      {{/link-to}}
-      {{confirm-button title="Delete" action="deleteReview" param=review}}
-    </h3>
-  </li>
-  <li>Rating: {{review.stars}}</li>
-  <li>Body: {{review.body}}</li>
+<div class="container-fluid">
+  {{#each model as |review|}}
+  {{log review}}
+  <div class="reviews-thumbnail">
+    <li>
+      <h3>
+        {{#link-to 'reviews.show' review}}
+          Title: {{review.title}}
+        {{/link-to}}
+        {{confirm-button title="Delete" action="deleteReview" param=review}}
+      </h3>
+    </li>
+    <li>Rating: {{review.stars}}</li>
+    <li>Body: {{review.body}}</li>
 
+  </div>
+  {{/each}}
+
+  {{#link-to 'reviews.create'}}<button class="create-review-button">Create a new review!</button>{{/link-to}}
+
+  {{#link-to 'users.current'}}<button>Home</button>{{/link-to}}
 </div>
-{{/each}}
-
-{{#link-to 'reviews.create'}}Create a new review!{{/link-to}}
-
-{{yield}}

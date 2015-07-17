@@ -5,7 +5,7 @@ export default Ember.Route.extend(AuthenticatedRouteMixin, {
   model: function(){
     return this.store.createRecord('review', {
       reviewer: this.get('session.currentUser'),
-      belongsTo: this.get(this.model('performer'))
+      // belongsTo: this.get(this.model('performer'))
     });
   },
 

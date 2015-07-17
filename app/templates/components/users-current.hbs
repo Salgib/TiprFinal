@@ -1,29 +1,36 @@
-<div class="user-container">
-
-  {{google-map}}
-
-
-  <h1 class="welcome-message">Hello, {{session.currentUser.username}}</h1><input type="text" class="search" placeholder="Search for a Performer...">
-
-  <div class="favorite-performers">
-    <ul>
-      <li>My Favorite Performers:</li>
-      <li>{{performers-index model=model}}</li>
-    </ul>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-6">
+      <h2 class="welcome-message">Hello {{session.currentUser.username}}, Welcome to Tipr!</h2>
+      <ul>
+        <li><a href="#">Interests</a></li>
+        <li><a href="#">Who I've Tipped</a></li>
+        <li><a href="#">Edit Profile</a></li>
+      </ul>
+    </div>
+    <span class="col-xs-6">{{google-map}}</span>
   </div>
 
-  <div class="patron-info">
-    <ul>
-      <li><a href="#">Interests</a></li>
-      <li><a href="#">Who I've Tipped</a></li>
-      <li><a href="#">Edit Profile</a></li>
-    </ul>
+  <div class="row">
+    <div class="col-xs-10">
+      <ul class="performer-index">
+        <li>Nearby Performers:</li>
+        <li>{{performers-index model=model}}</li>
+      </ul>
+    </div>
+    <span class="col-xs-2"></span>
   </div>
 
 
-  <div>{{#if session.isAuthenticated}}
-    {{#link-to 'index'}}<button  class="logout-button" {{ action 'invalidateSession' }}>Logout</button>{{/link-to}}
-  {{/if}}
-  </div>
+
+    <div class="row">
+      <span class="col-xs-10"></span>
+      <div class="col-xs-2">
+        {{#if session.isAuthenticated}}
+        {{#link-to 'index'}}<button  class="logout-button" {{ action 'invalidateSession' }}>Logout</button>{{/link-to}}
+      {{/if}}
+      </div>
+    </div>
+
 
 </div>

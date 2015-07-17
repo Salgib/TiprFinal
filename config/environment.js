@@ -26,7 +26,7 @@ module.exports = function(environment) {
       'font-src': "'self' *.googleapis.com *.gstatic.com",
       'connect-src': "'self' api.parse.com",
       'style-src':"'self' 'unsafe-inline' *.gstatic.com *.googleapis.com",
-      'img-src': "'self' 'data' *.gstatic.com *.googleapis.com",
+      'img-src': "'self' 'data' *.gstatic.com *.googleapis.com, http://files.parsetffs.com",
       'media-src': "'self'"
     },
 

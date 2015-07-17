@@ -1,45 +1,33 @@
-<div class="performer-info">
+<div class="performer-pic">
   <ul>
-    <li>Username: {{model.performer.username}}</li>
-    <li>Real Name: {{model.performer.firstName}} {{model.performer.lastName}}</li>
-    <li>What kind of Performance? {{model.performer.act}}</li>
-
+    <li><img src="{{model.profilepic.url}}" alt="Profile Picture" class="profile-pic"></li>
+    <!-- <li><img src="{{model.qrcode.url}}" alt="QR Code" class="qrcode"></li> -->
   </ul>
 </div>
 
 <div class="tip-options">
-  <a href="#"><img src="" alt="Tip $1"></a>
-  <a href="#"><img src="" alt="Tip $2"></a>
-  <a href="#"><img src="" alt="Tip $3"></a>
-</div>
-
-<div class="performer-pic">
-  <ul>
-    <li><img src="{{model.performer.profilepic.url}}" alt="Profile Picture" class="profile-pic"></li>
-    <li><img src="{{model.performer.qrcode.url}}" alt="QR Code" class="qrcode"></li>
-  </ul>
-</div>
-
-<div class="reviews-container">
-  <ul>
-    {{#each model.reviews as |review|}}
-    <li>
-      <div class="review">
-        <h3>Title: {{review.title}}</h3>
-        <h5>Reviewer: {{review.reviewer}}</h5>
-
-        <li>Rating: {{review.stars}}</li>
-        <li>Body: {{review.body}}</li>
-
-        {{#link-to 'reviews.update' review}}<button> Edit this review</button>{{/link-to}}
-      </div>
-    </li>
-    {{/each}}
-  </ul>
+  <a href="#"><img src="./images/tip1.png" alt="Tip $1"></a>
+  <a href="#"><img src=".././images/tip2.png" alt="Tip $2"></a>
+  <a href="#"><img src="./images/tip3.png" alt="Tip $3"></a>
 </div>
 
 
+  <div>
+    <ul>
+      <li>Username: {{model.username}}</li>
+      <li>Real Name: {{model.firstName}} {{model.lastName}}</li>
+      <li>What kind of Performance? {{model.act}}</li>
+
+    </ul>
+  </div>
 
 
 
-{{yield}}
+
+  <div class="reviews-container">
+
+      {{#link-to 'reviews.index'}}<button class="see-reviews-button">See all reviews!</button>{{/link-to}}
+
+  </div>
+
+  {{#link-to 'users.current'}}<button class="home-button">Home</button>{{/link-to}}

@@ -22,22 +22,39 @@ export default Ember.Component.extend({
      var j5Marker = new google.maps.Marker({
        position: johnny5,
        map: map,
+       url: 'http://localhost:4200/performers/uSq7jX8uYJ',
        title: "Johnny 5! is Alive!"
      });
+     google.maps.event.addListener(j5Marker, 'click', function(){
+       window.location.href = j5Marker.url;
+     });
+
+
+
 
      var bboy21Marker = new google.maps.Marker({
        position: bboy21,
+       url: 'http://localhost:4200/performers/ZjauzsC6Ij',
        map: map,
        title: "Breakdancing on Main!"
+     });
+     google.maps.event.addListener(bboy21Marker, 'click', function(){
+       window.location.href = bboy21Marker.url;
      });
 
      var kennyGMarker = new google.maps.Marker({
        position: kennyG,
        map: map,
+       url: 'http://localhost:4200/performers/2hjrb0dBRA',
        title: "Kenny G playing Now!"
      });
+     google.maps.event.addListener(kennyGMarker, 'click', function(){
+       window.location.href = kennyGMarker.url;
+     });
+
 
   }.on('didInsertElement')
+
 
 
 

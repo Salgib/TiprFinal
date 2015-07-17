@@ -11,10 +11,10 @@ export default DS.Model.extend({
   email: DS.attr('string'),
   stars: DS.attr('number'),
 
-  reviews: DS.hasMany('review'),
 
   qrcode: DS.attr(),
-  profilepic: DS.attr()
+  profilepic: DS.attr(),
+  profilepicsmall: DS.attr()
 
 
 

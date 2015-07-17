@@ -1,6 +1,6 @@
  @import 'ember-paper';
  @import 'palette';
-
+@import 'bootstrap';
  html,
  body {
    background-color: $darkblue;
@@ -75,6 +75,14 @@ paper-text {
   color: white;
 }
 
+.performer-index {
+  padding: 40px;
+}
+
+.performer-list {
+  padding: 0;
+}
+
 .performer-thumbnail {
   border: 1px solid $lightblue;
   border-radius: 5px;
@@ -82,7 +90,7 @@ paper-text {
   width: auto;
 }
 
-.reviews-thumbnail {
+.review {
   border: 1px solid $lightblue;
   border-radius: 5px;
   height: auto;
