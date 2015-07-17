@@ -6,6 +6,7 @@ module.exports = function(environment) {
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
+    LOG_STRIPE_SERVICE: true,
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -36,7 +37,9 @@ module.exports = function(environment) {
     authenticationRoute: 'login',
     routeIfAlreadyAuthenticated: 'users.current',
     routeAfterAuthentication:'users.current'
-    }
+  },
+
+
   };
 
   if (environment === 'development') {
@@ -51,6 +54,9 @@ module.exports = function(environment) {
     // Testem prefers this...
     ENV.baseURL = '/';
     ENV.locationType = 'none';
+    ENV.stripe = {
+      publishableKey: 'pk_test_rZElzrV3eXXSjJM5fqXVxUzF'
+    }
 
     // keep test console output quieter
     ENV.APP.LOG_ACTIVE_GENERATION = false;

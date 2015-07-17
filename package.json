@@ -41,6 +41,7 @@
     "ember-simple-auth-parse": "0.0.5"
   },
   "dependencies": {
+    "ember-stripe-service": "^3.0.0",
     "gmaps": "^0.4.18"
   }
 }
