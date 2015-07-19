@@ -1,9 +1,9 @@
 @import 'ember-paper';
 @import 'palette';
 @import 'stars';
-@import 'login-form';
 @import 'bootstrap';
 @import 'custom-navbar';
+@import 'login-form';
  html,
  body {
    background-color: $darkblue;
@@ -38,6 +38,11 @@
   margin: 0 auto;
   width: 1000px;
   color: $lightblue;
+ }
+
+ .create {
+   height: 500px;
+   display: block;
  }
 
  .login-container li {

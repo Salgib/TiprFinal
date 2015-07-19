@@ -1,4 +1,4 @@
-<form {{action 'createUser' on='submit'}}>
+<!-- <form {{action 'createUser' on='submit'}}>
   {{paper-text label="Username" type="username" value=model.username}}
 
   {{paper-text label="E-Mail" value=model.email}}
@@ -12,4 +12,50 @@
   {{paper-text label="Are you a performer or patron?" value=model.type}}
 
   {{#paper-button classNames="md-primary"}}Sign Up{{/paper-button}}
-</form>
+</form> -->
+
+
+<div class="container">
+  <form class='form-horizontal create'>
+    <div class='form-group'>
+      <label for="inputUsername" class='col-sm-2 control-label'> </label>
+      <div class='col-sm-8'>
+            {{input type="username" class='form-control' placeholder="Username" id="inputUsername" value=model.username}}
+      </div>
+    </div>
+    <div class='form-group'>
+      <label for='inputPassword' class='col-sm-2 control-label'> </label>
+      <div class='col-sm-8'>
+            {{input placeholder="Password" class='form-control' type="password" id='inputPassword' value=model.password}}
+      </div>
+    </div>
+    <div class='form-group'>
+      <label for='inputEmail' class='col-sm-2 control-label'> </label>
+      <div class='col-sm-8'>
+            {{input placeholder="E-Mail" class='form-control' id="inputEmail" value=model.email}}
+      </div>
+    </div>
+    <div class='form-group'>
+      <label for='inputFirstName' class='col-sm-2 control-label'> </label>
+      <div class='col-sm-8'>
+            {{input placeholder="First Name" class='form-control' id='inputFirstName' value=model.firstName}}
+      </div>
+    </div>
+    <div class='form-group'>
+      <label for='inputLastName' class='col-sm-2 control-label'> </label>
+      <div class='col-sm-8'>
+            {{input placeholder="Last Name" class='form-control' id='inputLastName' value=model.lastName}}
+      </div>
+    </div>
+    <div class='form-group'>
+      <label for='inputType' class='col-sm-2 control-label'> </label>
+      <div class='col-sm-8'>
+            {{input placeholder="Are you a performer or patron?" class='form-control' id="inputType" value=model.type}}
+      </div>
+    </div>
+
+      <center>
+        <button class='btn btn-submit' type="submit" {{action 'createUser'}}>Submit!</button>
+      </center>
+    </form>
+  </div>
