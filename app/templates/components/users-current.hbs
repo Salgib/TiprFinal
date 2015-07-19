@@ -1,6 +1,12 @@
-<div class="container-fluid">
+<div class="container">
   <div class="row">
-    <div class="col-xs-6">
+    <span class="col-md-1"></span>
+    <div class="col-md-10">
+      {{google-map}}
+    </div>
+    <span class="col-md-1"></span>
+  </div>
+    <div class="col-md-6">
       <h2 class="welcome-message">Hello {{session.currentUser.username}}, Welcome to Tipr!</h2>
       <ul>
         <li><a href="#">Interests</a></li>
@@ -8,29 +14,27 @@
         <li><a href="#">Edit Profile</a></li>
       </ul>
     </div>
-    <span class="col-xs-6">{{google-map}}</span>
-  </div>
+    <!-- <span class="col-md-6">{{google-map}}</span> -->
+
 
   <div class="row">
-    <div class="col-xs-10">
+    <div class="col-md-10">
       <ul class="performer-index">
         <li>Nearby Performers:</li>
         <li>{{performers-index model=model}}</li>
       </ul>
     </div>
-    <span class="col-xs-2"></span>
+    <span class="col-md-2"></span>
   </div>
 
 
 
     <div class="row">
-      <span class="col-xs-10"></span>
-      <div class="col-xs-2">
+      <span class="col-md-10"></span>
+      <div class="col-md-2">
         {{#if session.isAuthenticated}}
         {{#link-to 'index'}}<button  class="logout-button" {{ action 'invalidateSession' }}>Logout</button>{{/link-to}}
       {{/if}}
       </div>
     </div>
-
-
-</div>
+  </div>

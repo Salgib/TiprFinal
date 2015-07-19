@@ -1,19 +1,21 @@
-<div class="login-container">
-  <img src="./images/tiprlogo.png" alt="Tipr Logo" class="tiprlogo">
-  <section class="create-account">
-    <ul>
-      <li>Don't have an account?</li>
-      <li>{{#link-to 'users.create'}}<button>Sign Up for an Account!</button>{{/link-to}}</li>
-
-
-
-    </ul>
-  </section>
-
-  <section class="user-login">
-    <ul>
-      <li>{{login-form}}</li>
-    </ul>
-  </section>
+<div class="container main-page-bg col-md-12">
+  <div class="row">
+    <div class="col-lg-6">
+      
+    </div>
+    <div class="col-lg-6 pull-right">
+        {{login-form}}
+    </div>
+  </div>
 </div>
+
+
+
+  <!-- <div class="navbar navbar-inverse navbar-fixed-bottom">
+    <div class="container-fluid">
+      <p class="navbar-text pull-left"> </p>
+    </div>
+  </div> -->
+
+
 {{outlet}}
