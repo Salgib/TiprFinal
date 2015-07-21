@@ -20,6 +20,7 @@ Router.map(function() {
     this.route('show', {path: ':review_id'});
     this.route('update', {path: ':review_id/edit'});
   });
+  this.route('charge');
 });
 
 export default Router;

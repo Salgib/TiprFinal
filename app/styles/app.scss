@@ -6,12 +6,26 @@
 @import 'login-form';
  html,
  body {
-   background-color: $darkblue;
-   color: $lightblue;
+   background-color: $offblack;
+   color: $lightgreen;
  }
 
  * li {
    list-style: none;
+   color: $lightgreen;
+ }
+
+ .navbar-brand {
+margin: 0 0;
+padding: 0 0;
+}
+
+.login-btn {
+  display: block;
+}
+
+ .pull-right {
+   margin-right: 10px;
  }
 
  .main-page-bg {
@@ -37,7 +51,7 @@
   height: auto;
   margin: 0 auto;
   width: 1000px;
-  color: $lightblue;
+  color: $lightgreen;
  }
 
  .create {
@@ -45,12 +59,16 @@
    display: block;
  }
 
+ .accnt-sign-up {
+   margin-top: 5px;
+ }
+
  .login-container li {
    list-style: none;
  }
 
 .login-field {
-  color: $lightblue;
+  color: $lightgreen;
 }
 
 .favorite-performers li {
@@ -72,7 +90,7 @@
 }
 
 .welcome-message {
-  color: $lightblue;
+  color: $lightgreen;
   padding-left: 30px;
 }
 
@@ -102,14 +120,21 @@ paper-text {
 }
 
 .performer-thumbnail {
-  border: 1px solid $lightblue;
-  border-radius: 5px;
   height: auto;
   width: auto;
+  margin-top: 5px;
+}
+
+a {
+  color: $lightgreen;
+}
+
+a:hover {
+  color: $darkgreen;
 }
 
 .review {
-  border: 1px solid $lightblue;
+  border: 1px solid $lightgreen;
   border-radius: 5px;
   height: auto;
   width: auto;

@@ -3,13 +3,13 @@
 *:after {
    box-sizing: border-box;
 }
-form .login{
+form {
   border: 1px solid #c6c7cc;
   border-radius: 5px;
   font: 14px/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif;
   overflow: hidden;
   width: 240px;
-  margin-top: 100px;
+  margin-top: 20px;
   margin-right: 20px;
 }
 
@@ -60,6 +60,7 @@ input {
   background: #343434;
   border-top: 1px solid #c6c7cc;
   padding: 20px;
+  display: block;
 }
 .account-action .btn {
   background: linear-gradient(#ffffff, #c0c0c0);
@@ -67,8 +68,8 @@ input {
   color: #fff;
   cursor: pointer;
   font-weight: bold;
-  float: left;
-  padding: 8px 16px;
+  // float: left;
+  padding: 8px 16px 12px;
 }
 .account-action label {
   color: #7c7c80;

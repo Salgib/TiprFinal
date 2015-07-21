@@ -33,7 +33,7 @@
       <span class="col-md-10"></span>
       <div class="col-md-2">
         {{#if session.isAuthenticated}}
-        {{#link-to 'index'}}<button  class="logout-button" {{ action 'invalidateSession' }}>Logout</button>{{/link-to}}
+        {{#link-to 'index'}}<input  class="btn" value="Log Out" {{ action 'invalidateSession' }}>{{/link-to}}
       {{/if}}
       </div>
     </div>

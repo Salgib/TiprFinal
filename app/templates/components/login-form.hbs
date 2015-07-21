@@ -15,13 +15,12 @@
   </fieldset>
 
   <fieldset class="account-action">
-    <input class='btn' type="submit" {{action 'authenticate'}} value="Login">
-    <input type="checkbox" name="remember" class="remember">Remember Me
-    <hr>
-    <center>
-      <p><small>Don't have an account?</small></p>
-      {{#link-to 'users.create'}}<input class="btn" value="Sign Up!">{{/link-to}}
-    </center>
+      <center>
+        <input class='btn login-btn' type="submit" {{action 'authenticate'}} value="Login">
+
+        <p><small>Don't have an account?</small></p>
+        {{#link-to 'users.create'}}<input class="btn" value="Sign Up!">{{/link-to}}
+      </center>
   </fieldset>
 
 </form>

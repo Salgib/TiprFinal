@@ -1,45 +1,35 @@
 import Ember from 'ember';
 
+
 export default Ember.Component.extend({
 
+  stripe: Ember.inject.service(),
   actions:{
+    ccPayment: function() {
 
-  stripePayment: function(){
+    var customer = this.get('customer');
 
-    var handler = StripeCheckout.configure({
-        key: 'pk_test_rZElzrV3eXXSjJM5fqXVxUzF',
-        image: '/img/documentation/checkout/marketplace.png',
-        token: function(token) {
-          var stripe = require("stripe")(
-            "sk_test_KVa4cVIz0oseq6NpHLl8NR77"
-          );
-          stripe.tokens.create({
-            card: {
-              "number": '4242424242424242',
-              "exp_month": 12,
-              "exp_year": 2016,
-              "cvc": '123'
-            }
-          }, function(err, token){
-            //asynchronously called
-          });
-        }
-      });
+    // obtain access to the injected service
+    var stripe = this.get('stripe');
 
-      $('#tip-one').on('click', function(e) {
-        // Open Checkout with further options
-        handler.open({
-          name: 'saljgib',
-          description: 'Tip $1',
-          amount: 100
-        });
-        e.preventDefault();
-      });
+    // if for example you had the cc set in your controller
+    var card = this.get('creditCard');
 
-      // Close Checkout on page navigation
-      $(window).on('popstate', function() {
-        handler.close();
-      });
-    }
+    return stripe.card.createToken(card).then(function(response) {
+      // you get access to your newly created token here
+      customer.set('stripeToken', response.id);
+      return customer.save();
+    })
+    .then(function() {
+      Parse.Cloud.run('chargePayment', token)
+    })
+    .catch(function(response) {
+      // if there was an error retrieving the token you could get it here
+
+      if (response.error.type === 'card_error') {
+        // show the error in the form or something
+      }
+    });
+   }
   }
-});
+})
