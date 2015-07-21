@@ -18,6 +18,7 @@ export default Ember.Component.extend({
 
   handleToken: function(token){
     this.sendAction('action', token.id);
+    // console.log(token);
   },
 
   actions: {

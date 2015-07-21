@@ -54,14 +54,10 @@ module.exports = function(environment) {
     // Testem prefers this...
     ENV.baseURL = '/';
     ENV.locationType = 'none';
-    ENV.stripe = {
+    ENV.Stripe = {
       publishableKey: 'pk_test_rZElzrV3eXXSjJM5fqXVxUzF'
     };
-    ENV.paypal = {
-      endPoint: 'https://api.sandbox.paypal.com',
-      clientId: 'AbnbfORGgFyK2H-7vG4oApYpbeNw6vqaXEstJbijNfJRelCc_-C6z7WTpqiCHn-RIdSrGQboYSWlzMW_',
-      secret: 'EO5-nbV2_vgbUQiHtZ4E-vW5ggxFIyQ9t3OTBWKpuecAPUL6_ZjezWZwOCJDwY_8xbcmmpf3uh0c_PmL'
-    }
+
 
     // keep test console output quieter
     ENV.APP.LOG_ACTIVE_GENERATION = false;
