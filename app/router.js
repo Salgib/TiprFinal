@@ -9,7 +9,9 @@ Router.map(function() {
   this.route('login');
 
   this.route('performers', function(){
-    this.route('show', {path: ':performer_id'});
+    this.route('show', {path: ':performer_id'}, function() {
+      this.route('pay');
+    });
   });
   this.route('users', function() {
     this.route('create');
@@ -21,6 +23,7 @@ Router.map(function() {
     this.route('update', {path: ':review_id/edit'});
   });
   this.route('charge');
+  this.route('stripe-payment');
 });
 
 export default Router;

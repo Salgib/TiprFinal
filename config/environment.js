@@ -23,7 +23,7 @@ module.exports = function(environment) {
 
     contentSecurityPolicy: {
       'default-src': "'none'",
-      'script-src': "'self' 'unsafe-eval' *.googleapis.com *.gstatic.com",
+      'script-src': "'self' 'unsafe-eval' *.googleapis.com *.gstatic.com *.stripe.com",
       'font-src': "'self' *.googleapis.com *.gstatic.com",
       'connect-src': "'self' api.parse.com",
       'style-src':"'self' 'unsafe-inline' *.gstatic.com *.googleapis.com *.stripe.com",
@@ -76,3 +76,8 @@ module.exports = function(environment) {
 
   return ENV;
 };
+
+
+
+
+// curl -o vendor/gmaps.js https://maps.googleapis.com/maps/api/js?key=AIzaSyAM61X2Jv2zCYfeU-dBP5NvikldnhpYM1k
