@@ -13,8 +13,8 @@ export default DS.Model.extend({
 
 
   qrcode: DS.attr(),
-  profilepic: DS.attr(),
-  profilepicsmall: DS.attr()
+  profilelarge: DS.attr(),
+  profilesmall: DS.attr()
 
 
 

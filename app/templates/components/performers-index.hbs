@@ -1,12 +1,10 @@
 {{#each model as |performer|}}
 <div class="performer-thumbnail">
     <li>
-      <img src="{{model.profilePic.url}}" alt="Profile Picture">
-
         {{#link-to 'performers.show' performer}}
+        <img src="{{model.profilesmall.url}}" alt="Profile Picture">
           Username: {{performer.username}}
         {{/link-to}}
-
     </li>
 
   <li>Rating: {{performer.stars}}</li>
