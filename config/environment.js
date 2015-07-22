@@ -53,7 +53,7 @@ module.exports = function(environment) {
   if (environment === 'production') {
     // Testem prefers this...
     ENV.baseURL = '/TiprFinal/';
-    ENV.locationType = 'none';
+    ENV.locationType = 'hash';
     ENV.Stripe = {
       publishableKey: 'pk_test_rZElzrV3eXXSjJM5fqXVxUzF'
     };
