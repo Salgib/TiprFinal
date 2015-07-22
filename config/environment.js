@@ -50,9 +50,9 @@ module.exports = function(environment) {
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
   }
 
-  if (environment === 'test') {
+  if (environment === 'production') {
     // Testem prefers this...
-    ENV.baseURL = '/';
+    ENV.baseURL = '/TiprFinal/';
     ENV.locationType = 'none';
     ENV.Stripe = {
       publishableKey: 'pk_test_rZElzrV3eXXSjJM5fqXVxUzF'
