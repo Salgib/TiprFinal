@@ -54,7 +54,7 @@ module.exports = function(environment) {
     // Testem prefers this...
     ENV.baseURL = '/TiprFinal/';
     ENV.locationType = 'hash';
-    ENV.stripe = {
+    ENV.Stripe = {
       publishableKey: 'pk_test_rZElzrV3eXXSjJM5fqXVxUzF'
     };
 
