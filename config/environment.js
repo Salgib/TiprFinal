@@ -54,9 +54,7 @@ module.exports = function(environment) {
     // Testem prefers this...
     ENV.baseURL = '/';
     ENV.locationType = 'none';
-    ENV.Stripe = {
-      publishableKey: 'pk_test_rZElzrV3eXXSjJM5fqXVxUzF'
-    };
+    ENV.Stripe.publishableKey: 'pk_test_rZElzrV3eXXSjJM5fqXVxUzF';
 
 
     // keep test console output quieter
