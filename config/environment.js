@@ -36,8 +36,12 @@ module.exports = function(environment) {
     crossOriginWhitelist: ['https://api.parse.com'],
     authenticationRoute: 'login',
     routeIfAlreadyAuthenticated: 'users.current',
-    routeAfterAuthentication:'users.current'
+    routeAfterAuthentication:'users.current',
   },
+
+  stripe: {
+    publishableKey: 'pk_test_rZElzrV3eXXSjJM5fqXVxUzF'
+  }
 
 
   };
@@ -54,10 +58,6 @@ module.exports = function(environment) {
     // Testem prefers this...
     ENV.baseURL = '/TiprFinal/';
     ENV.locationType = 'hash';
-    ENV.Stripe = {
-      publishableKey: 'pk_test_rZElzrV3eXXSjJM5fqXVxUzF'
-    };
-
 
     // keep test console output quieter
     ENV.APP.LOG_ACTIVE_GENERATION = false;
