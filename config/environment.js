@@ -54,10 +54,8 @@ module.exports = function(environment) {
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
   }
 
-  if (environment === 'production') {
+  if (environment === 'testing') {
     // Testem prefers this...
-    ENV.baseURL = '/TiprFinal/';
-    ENV.locationType = 'hash';
 
     // keep test console output quieter
     ENV.APP.LOG_ACTIVE_GENERATION = false;
@@ -67,7 +65,8 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
+    ENV.locationType = 'hash';
+    ENV.baseURL = '/TiprFinal/';
   }
 
   return ENV;
