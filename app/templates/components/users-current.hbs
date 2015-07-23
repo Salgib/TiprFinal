@@ -35,7 +35,7 @@
     <div class="col-md-12">
       <center>
         {{#if session.isAuthenticated}}
-          {{#link-to '/TiprFinal/'}}
+          {{#link-to 'index'}}
             <input class="btn logoutbtn" value="Log Out" {{ action 'invalidateSession' }}>
           {{/link-to}}
         {{/if}}
