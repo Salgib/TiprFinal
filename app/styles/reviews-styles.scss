@@ -7,7 +7,8 @@
   padding: 5px 0 15px;
 }
 
-.review-submit {
+.review-submit,
+.review-edit {
   color: $darkgrey;
 }
 
@@ -21,7 +22,8 @@
   width: 200px;
 }
 
-.review-submit form {
+.review-submit form,
+.review-edit form {
   margin: 0;
   background: $darkgrey;
 }

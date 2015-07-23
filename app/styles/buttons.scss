@@ -17,13 +17,15 @@
 .delete-btn-confirm,
 .create-review-btn:hover,
 .edit-btn:hover,
-.submit-review-btn:hover {
+.submit-review-btn:hover,
+.edit-review-btn:hover {
   color: black;
   background-color: $lightgreen;
   border-radius: 5px;
 }
 
-.submit-review-btn {
+.submit-review-btn,
+.edit-review-btn {
   border: 1px solid $lightgreen;
   margin-bottom: 15px;
 }
@@ -59,7 +61,8 @@
 .delete-btn,
 .create-review-btn,
 .edit-btn,
-.submit-review-btn {
+.submit-review-btn,
+.edit-review-btn {
   color: $offwhite;
   background-color: $medgrey;
   border-radius: 5px;

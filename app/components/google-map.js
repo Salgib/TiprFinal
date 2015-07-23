@@ -22,7 +22,7 @@ export default Ember.Component.extend({
      var j5Marker = new google.maps.Marker({
        position: johnny5,
        map: map,
-       url: 'http://localhost:4200/performers/uSq7jX8uYJ',
+       url: 'http://salgib.github.io/TiprFinal/#/performers/uSq7jX8uYJ',
        title: "Johnny 5! is Alive!"
      });
      google.maps.event.addListener(j5Marker, 'click', function(){
@@ -34,7 +34,7 @@ export default Ember.Component.extend({
 
      var bboy21Marker = new google.maps.Marker({
        position: bboy21,
-       url: 'http://localhost:4200/performers/ZjauzsC6Ij',
+       url: 'http://salgib.github.io/TiprFinal/#/performers/ZjauzsC6Ij',
        map: map,
        title: "Breakdancing on Main!"
      });
@@ -45,7 +45,7 @@ export default Ember.Component.extend({
      var kennyGMarker = new google.maps.Marker({
        position: kennyG,
        map: map,
-       url: 'http://localhost:4200/performers/2hjrb0dBRA',
+       url: 'http://salgib.github.io/TiprFinal/#/performers/2hjrb0dBRA',
        title: "Kenny G playing Now!"
      });
      google.maps.event.addListener(kennyGMarker, 'click', function(){

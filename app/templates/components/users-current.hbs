@@ -6,36 +6,40 @@
       </div>
     </center>
   </div>
-    <center>
-      <div class="col-md-12">
-        <h2 class="welcome-message">Hello {{session.currentUser.username}}, Welcome to Tipr!</h2>
+  <center>
+    <div class="col-md-12">
+      <h2 class="welcome-message">Hello {{session.currentUser.username}}, Welcome to Tipr!</h2>
 
-          <div class="col-md-4"><a href="#">Interests</a></div>
-          <div class="col-md-4"><a href="#">Who I've Tipped</a></div>
-          <div class="col-md-4"><a href="#">Edit Profile</a></div>
+      <div class="col-md-4"><a href="#">Interests</a></div>
+      <div class="col-md-4"><a href="#">Who I've Tipped</a></div>
+      <div class="col-md-4"><a href="#">Edit Profile</a></div>
 
-      </div>
-    </center>
+    </div>
+  </center>
 
   <div class="row">
     <center>
-        <div class="col-md-12">
-          <ul class="performer-index">
-            <li class="nearby-performers">Nearby Performers:</li>
-            <li>{{performers-index model=model}}</li>
-          </ul>
-        </div>
+      <div class="col-md-12">
+        <ul class="performer-index">
+          <li class="nearby-performers">Nearby Performers:</li>
+          <li>{{performers-index model=model}}</li>
+        </ul>
+      </div>
     </center>`
   </div>
 
 
 
-    <div class="row">
-      <span class="col-md-10"></span>
-      <div class="col-md-2">
+  <div class="row">
+
+    <div class="col-md-12">
+      <center>
         {{#if session.isAuthenticated}}
-        {{#link-to 'index'}}<input  class="btn logoutbtn" value="Log Out" {{ action 'invalidateSession' }}>{{/link-to}}
-      {{/if}}
-      </div>
+          {{#link-to '/TiprFinal/'}}
+            <input class="btn logoutbtn" value="Log Out" {{ action 'invalidateSession' }}>
+          {{/link-to}}
+        {{/if}}
+      </center>
     </div>
   </div>
+</div>
