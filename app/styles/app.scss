@@ -4,40 +4,41 @@
 @import 'bootstrap';
 @import 'custom-navbar';
 @import 'login-form';
- html,
- body {
-   background-color: $offblack;
-   color: $lightgreen;
- }
-
- * li {
-   list-style: none;
-   color: $lightgreen;
- }
-
- .navbar-brand {
-margin: 0 0;
-padding: 0 0;
+@import 'buttons';
+@import 'performer-styles';
+@import 'reviews-styles';
+html,
+body {
+  background-color: $medgrey;
+  color: $offwhite;
 }
 
-.login-btn {
-  display: block;
+* li {
+  list-style: none;
+  color: $offwhite;
 }
 
- .pull-right {
-   margin-right: 10px;
- }
+a {
+  color: $offwhite;
+}
+a:hover {
+  color: $lightgrey;
+}
 
- .main-page-bg {
-   background-image: url('.././images/main-st-bg.jpg');
-   height: 580px;
-   width: 100%;
- }
+.pull-right {
+  margin-right: 10px;
+}
 
- .main-bg {
-   height: 580px;
-   width: 1340px;
- }
+.main-page-bg {
+  background-image: url(".././images/main-st-bg.jpg");
+  height: 580px;
+  width: 100%;
+}
+
+.main-bg {
+  height: 580px;
+  width: 1340px;
+}
 
 .map-canvas {
   height: 300px;
@@ -51,96 +52,34 @@ padding: 0 0;
   height: auto;
   margin: 0 auto;
   width: 1000px;
-  color: $lightgreen;
- }
+  color: $offwhite;
+}
 
- .create {
-   height: 500px;
-   display: block;
- }
+.create {
+  height: 500px;
+  display: block;
+}
 
- .accnt-sign-up {
-   margin-top: 5px;
- }
+.accnt-sign-up {
+  margin-top: 5px;
+}
 
- .login-container li {
-   list-style: none;
- }
+.login-container li {
+  list-style: none;
+}
 
 .login-field {
   color: $lightgreen;
 }
 
-.favorite-performers li {
+.user-info li {
   list-style: none;
-}
-
-.patron-info li {
-  list-style: none;
-  // margin-left: 30px;
-  display: inline-block;
-  color: white;
-}
-
-.user-container {
-  height: auto;
-  margin: 10 30 0;
-  padding: 10 30;
-  width: 100%;
+  padding: 0 20px;
+  display: inline;
+  color: $offwhite;
 }
 
 .welcome-message {
   color: $lightgreen;
-  padding-left: 30px;
-}
-
-
-
-.logout-button {
-  color: $lightblue;
-  background-color: $blue;
-  margin: 0 auto;
-}
-
-.logout-button:hover {
-  color: black;
-  background-color: $lightblue;
-}
-
-paper-text {
-  color: white;
-}
-
-.performer-index {
-  padding: 40px;
-}
-
-.performer-list {
-  padding: 0;
-}
-
-.performer-thumbnail {
-  height: auto;
-  width: auto;
-  margin-top: 5px;
-}
-
-a {
-  color: $lightgreen;
-}
-
-a:hover {
-  color: $darkgreen;
-}
-
-.review {
-  border: 1px solid $lightgreen;
-  border-radius: 5px;
-  height: auto;
-  width: auto;
-}
-
-.qrcode{
-  border: 2px solid $darkblue;
-  border-radius: 3px;
+  font-size: 3em;
 }

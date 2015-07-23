@@ -1,0 +1,42 @@
+@import 'palette';
+
+.login-btn {
+  display: block;
+}
+
+.logoutbtn {
+  color: $offwhite;
+  background-color: $medgrey;
+  margin: 100px 0 0;
+
+}
+
+.logoutbtn:hover,
+.tip-btn:hover,
+.reviews-btn:hover {
+  color: black;
+  background-color: $lightgreen;
+}
+
+.tip-btn{
+  color: $offwhite;
+  background-color: $medgrey;
+  border: 1px solid $lightgreen;
+  border-radius: 50%;
+  font-size: 2em;
+  padding: 2px;
+  margin: 1px;
+  height: 100px;
+  width: 100px;
+}
+
+
+
+.tip-form {
+  border: none;
+}
+
+.reviews-btn {
+  color: $offwhite;
+  background-color: $medgrey;
+}

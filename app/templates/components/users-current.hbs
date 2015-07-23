@@ -1,30 +1,31 @@
 <div class="container">
   <div class="row">
-    <span class="col-md-1"></span>
-    <div class="col-md-10">
-      {{google-map}}
-    </div>
-    <span class="col-md-1"></span>
+    <center>
+      <div class="col-md-12">
+        {{google-map}}
+      </div>
+    </center>
   </div>
-    <div class="col-md-6">
-      <h2 class="welcome-message">Hello {{session.currentUser.username}}, Welcome to Tipr!</h2>
-      <ul>
-        <!-- <li><a href="#">Interests</a></li>
-        <li><a href="#">Who I've Tipped</a></li>
-        <li><a href="#">Edit Profile</a></li> -->
-      </ul>
-    </div>
-    <!-- <span class="col-md-6">{{google-map}}</span> -->
+    <center>
+      <div class="col-md-12">
+        <h2 class="welcome-message">Hello {{session.currentUser.username}}, Welcome to Tipr!</h2>
 
+          <div class="col-md-4"><a href="#">Interests</a></div>
+          <div class="col-md-4"><a href="#">Who I've Tipped</a></div>
+          <div class="col-md-4"><a href="#">Edit Profile</a></div>
+
+      </div>
+    </center>
 
   <div class="row">
-    <div class="col-md-10">
-      <ul class="performer-index">
-        <li>Nearby Performers:</li>
-        <li>{{performers-index model=model}}</li>
-      </ul>
-    </div>
-    <span class="col-md-2"></span>
+    <center>
+        <div class="col-md-12">
+          <ul class="performer-index">
+            <li class="nearby-performers">Nearby Performers:</li>
+            <li>{{performers-index model=model}}</li>
+          </ul>
+        </div>
+    </center>`
   </div>
 
 
@@ -33,7 +34,7 @@
       <span class="col-md-10"></span>
       <div class="col-md-2">
         {{#if session.isAuthenticated}}
-        {{#link-to 'index'}}<input  class="btn" value="Log Out" {{ action 'invalidateSession' }}>{{/link-to}}
+        {{#link-to 'index'}}<input  class="btn logoutbtn" value="Log Out" {{ action 'invalidateSession' }}>{{/link-to}}
       {{/if}}
       </div>
     </div>

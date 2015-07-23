@@ -1,14 +1,19 @@
 {{#each model as |performer|}}
-<div class="performer-thumbnail">
-    <li>
-        {{#link-to 'performers.show' performer}}
-        <img src="{{performer.profilesmall.url}}" alt="Profile Picture">
-          Username: {{performer.username}}
-        {{/link-to}}
-    </li>
+<div class="performer-thumbnail-align">
+    <div class="col-md-4 performer-thumbnail">
+        <li>
+          {{#link-to 'performers.show' performer}}<img src="{{performer.profilesmall.url}}" alt="Profile Picture" class="profile-picture">{{/link-to}}
+        </li>
 
-  <li>Rating: {{performer.stars}}</li>
-  <li>Act: {{performer.act}}</li>
+        <li>
+            {{#link-to 'performers.show' performer}}
+              Username: {{performer.username}}
+            {{/link-to}}
+        </li>
+
+      <li>Rating: {{performer.stars}}</li>
+      <li>Act: {{performer.act}}</li>
+    </div>
 </div>
 
 {{/each}}

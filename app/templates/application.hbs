@@ -1,6 +1,6 @@
 <div class="navbar navbar-inverse navbar-static-top navbar-custom" style="margin-bottom: 0px;">
   <div class="container">
-      <a href=""><div class="navbar-brand"><img src='.././images/tiprlogo.svg'></div></a>
+      {{#link-to 'users.current'}}<div class="navbar-brand"><img src='.././images/tiprlogo.svg'></div>{{/link-to}}
       <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
@@ -8,9 +8,9 @@
       </button>
       <div class="collapse navbar-collapse navHeaderCollapse">
         <ul class="nav navbar-nav navbar-right">
-          <li class="active"><a href="#">Home</a></li>
+          <li class="active">{{#link-to 'users.current'}}Home{{/link-to}}</li>
           <li><a href="#">About</a></li>
-        
+
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Social <b class="caret"></b></a>
             <ul class="dropdown-menu">

@@ -1,29 +1,33 @@
-<div class="performer-pic">
-  <img src="{{model.profilelarge.url}}" alt="Profile Picture">
-</div>
+<div class="container">
+  <div class="col-md-12">
+    <center>
+      <div class='row'>
+        <img src="{{model.profilelarge.url}}" alt="Profile Picture" class="profile-picture">
+      </div>
 
-<div>
-  {{performers-show-pay model=model action='checkout'}}
+      <div class='row'>
+        {{performers-show-pay model=model action='checkout'}}
+      </div>
+    </center>
 
-</div>
-
-
-  <div>
-    <ul>
-      <li>Username: {{model.username}}</li>
-      <li>Real Name: {{model.firstName}} {{model.lastName}}</li>
-      <li>What kind of Performance? {{model.act}}</li>
-
-    </ul>
+    <div class='row '>
+      <ul class="performer-info">
+        <center>
+          <li>Username: {{model.username}}</li>
+          <li>Real Name: {{model.firstName}} {{model.lastName}}</li>
+          <li>What kind of Performance? {{model.act}}</li>
+        </center>
+      </ul>
+    </div>
   </div>
 
 
 
-
-  <div class="reviews-container">
-
-      {{#link-to 'reviews.index'}}<button class="see-reviews-button">See all reviews!</button>{{/link-to}}
-
+  <div class="row">
+    <center>
+      {{#link-to 'reviews.index'}}
+        <button class="reviews-btn">See what others think of me!</button>
+      {{/link-to}}
+    </center>
   </div>
-
-  {{#link-to 'users.current'}}<button class="home-button">Home</button>{{/link-to}}
+</div>
