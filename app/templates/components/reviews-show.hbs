@@ -1,11 +1,19 @@
 <div class="review">
-  <h3>Title: {{model.title}}</h3>
-  <h5>Reviewer: {{model.reviewer}}</h5>
+  <center>
+  <div class="row">
+    <h1 class="col-md-11">{{model.title}}</h1>
+    <div class="col-md-1">
+      {{#link-to 'reviews.update' model}}
+        <button class="edit-btn"><i class="fa fa-pencil-square-o"></i></button>
+      {{/link-to}}
+    </div>
+  </div>
+  <h4>Reviewed by: salgib</h4>
 
-  <li>Rating: {{model.stars}}</li>
-  <li>Body: {{model.body}}</li>
+  <li>{{model.stars}} Stars!</li>
+  <li>{{model.body}}</li>
+</center>
 
-  {{#link-to 'reviews.update' model}}<button> Edit this review</button>{{/link-to}}
 </div>
 
 {{yield}}

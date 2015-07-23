@@ -1,6 +1,31 @@
-.review {
+.review,
+.reviews-thumbnail {
   border: 1px solid $offwhite;
   border-radius: 5px;
-  height: auto;
-  width: auto;
+  background: $darkgrey;
+  margin: 10px 0;
+  padding: 5px 0 15px;
+}
+
+.review-submit {
+  color: $darkgrey;
+}
+
+.review-title {
+  width: 200px;
+  margin: 15px 0 0;
+}
+.review-body {
+  border-radius: 5px;
+  height: 100px;
+  width: 200px;
+}
+
+.review-submit form {
+  margin: 0;
+  background: $darkgrey;
+}
+
+.rating {
+  margin-left: 45px;
 }

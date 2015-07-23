@@ -1,5 +1,5 @@
 {{#if isShowingConfirmation}}
-  <button {{action 'confirm'}}>Are you sure?</button>
+  <button {{action 'confirm'}} class="delete-btn-confirm">Are you sure?</button>
 {{else}}
-  <button {{action 'showConfirmation'}}>{{title}}</button>
+  <button {{action 'showConfirmation'}} class="delete-btn"><i class="fa fa-times"></i></button>
 {{/if}}

@@ -12,10 +12,20 @@
 }
 
 .logoutbtn:hover,
-.tip-btn:hover,
-.reviews-btn:hover {
+.reviews-btn:hover,
+.delete-btn:hover,
+.delete-btn-confirm,
+.create-review-btn:hover,
+.edit-btn:hover,
+.submit-review-btn:hover {
   color: black;
   background-color: $lightgreen;
+  border-radius: 5px;
+}
+
+.submit-review-btn {
+  border: 1px solid $lightgreen;
+  margin-bottom: 15px;
 }
 
 .tip-btn{
@@ -30,6 +40,11 @@
   width: 100px;
 }
 
+.tip-btn:hover {
+  color: black;
+  background-color: $lightgreen;
+}
+
 
 
 .tip-form {
@@ -37,6 +52,25 @@
 }
 
 .reviews-btn {
+  margin-bottom: 30px;
+}
+
+.reviews-btn,
+.delete-btn,
+.create-review-btn,
+.edit-btn,
+.submit-review-btn {
   color: $offwhite;
   background-color: $medgrey;
+  border-radius: 5px;
+}
+
+.create-review-button {
+  font-size: 2em;
+  margin: 10px 0;
+}
+
+.delete-btn-main,
+.edit-btn {
+  margin: 20px 0 0;
 }
