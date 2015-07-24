@@ -5,7 +5,7 @@
         <div class="col-md-12">
           <h4 class="review-title">
             {{model.title}}
-            <button class="edit-btn pull-right"><i class="fa fa-pencil-square-o"></i></button>
+            {{#link-to 'reviews.update' model}}<button class="edit-btn pull-right"><i class="fa fa-pencil-square-o"></i></button>{{/link-to}}
           </h4>
         </div>
       </center>
