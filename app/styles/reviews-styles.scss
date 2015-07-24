@@ -13,13 +13,17 @@
 }
 
 .review-title {
-  width: 200px;
-  margin: 15px 0 0;
+  margin: 15px 0 0 35px;
 }
 .review-body {
   border-radius: 5px;
   height: 100px;
-  width: 200px;
+  width: auto;
+  padding-top: 20px;
+}
+
+.reviewed-by {
+  margin: 10px 0;
 }
 
 .review-submit form,

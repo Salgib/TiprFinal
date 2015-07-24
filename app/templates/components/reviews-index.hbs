@@ -2,18 +2,26 @@
   {{#each model as |review|}}
     {{log review}}
     <div class="reviews-thumbnail">
-      <center>
-        <li class="row">
-          <h3 class="col-md-11">
+      <li class="row">
+        <center>
+          <div class="col-md-12">
+          <h4 class="review-title">
             {{#link-to 'reviews.show' review}}
               {{review.title}}
             {{/link-to}}
-          </h3>
-          <span class="col-md-1 delete-btn-main">{{confirm-button title="Delete" action="deleteReview" param=review}}</span>
-        </li>
-        <li>{{review.stars}} Stars!</li>
-        <li>{{review.body}}</li>
-      </center>
+            <span class="delete-btn-main pull-right">{{confirm-button title="Delete" action="deleteReview" param=review}}</span>
+          </h4>
+        </div>
+        </center>
+
+      </li>
+
+          <center>
+            <li>{{review.stars}} Stars!</li>
+            <li class="review-body">{{review.body}}</li>
+          </center>
+
+
     </div>
   {{/each}}
 
